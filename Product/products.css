@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+}
+
+nav {
+
+}
+
+/* main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+} */
+
+ul {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+li {
+    list-style: none;
+    border: solid 1px black;
+    text-align: center;
+}
+
+.shoe-heels {
+    flex-direction: column;
+}
