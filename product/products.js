@@ -1,6 +1,7 @@
 // import functions and grab DOM elements
+// import functions and grab DOM elements
 import { shoes } from './data.js';
-import { renderShoe } from '../../render-shoe.js';
+import { renderShoe } from './render-shoe.js';
 // initialize state
 
 const list = document.getElementById('list');
