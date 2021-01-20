@@ -1,11 +1,11 @@
-export const shoes = [
+export const shoe = [
     {
         id: 1,
         name: 'Black Heels',
         description: 'Four inch black high heels with a thin heel.',
         category: 'heels',
         price: 120,
-        brand: Sam Edelman,
+        brand: 'Sam Edelman',
         size: 7.5,
         image: 'heels.png',
     },
@@ -16,7 +16,7 @@ export const shoes = [
         description: 'Three inch black high heel boots with a medium width heel.',
         category: 'boots',
         price: 150,
-        brand: Sam Edelman,
+        brand: 'Sam Edelman',
         size: 7.5,
         image: 'boots.png',
     },
@@ -38,7 +38,7 @@ export const shoes = [
         description: 'Tan pointed toe flats.',
         category: 'flats',
         price: 120,
-        brand: Sam Edelman,
+        brand: 'Sam Edelman',
         size: 7.5,
         image: 'flats.png',
     },
@@ -49,7 +49,7 @@ export const shoes = [
         description: 'Black rope sandals that tie up the ankle.',
         category: 'sandals',
         price: 60,
-        brand: Sam Edelman,
+        brand: 'Sam Edelman',
         size: 7.5,
         image: 'sandals.png',
     },
@@ -64,4 +64,4 @@ export const shoes = [
         size: 7.5,
         image: 'slippers.png',
     },
-]
+];
