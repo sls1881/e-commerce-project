@@ -11,7 +11,7 @@ export function renderShoe(shoes) {
     img.src = `../assets/${shoes.image}`;
 
     const pName = document.createElement('p');
-    pName.classList.add('name');
+    pName.classList.add('nßame');
     pName.textContent = `${shoes.name}`;
     li.append(pName);
 
