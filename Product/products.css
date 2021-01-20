@@ -2,29 +2,62 @@
     box-sizing: border-box;
 }
 
-nav {
-
+body {
+    --color1: hsla(349, 25%, 79%, 1);
+    --color2: hsla(323, 32%, 73%, 1);
+    --color3: hsla(317, 36%, 65%, 1);
+    --color4: hsla(313, 38%, 57%, 1);
+    --color5: hsla(301, 45%, 47%, 1);
 }
 
-/* main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-} */
+body, button {
+    font-family: 'Dosis', sans-serif;
+}
+
+nav {
+    border-bottom: 2px solid black;
+    height: 100px;
+}
+
+h1 {
+    font-size: 3rem;
+    text-align: center;
+}
 
 ul {
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
 }
 
 li {
     list-style: none;
-    border: solid 1px black;
+    border: dotted 1px darkgray;
+    border-radius: 15px;
     text-align: center;
+    padding-bottom: 10px;
+    align-content: baseline;
+    height: 550px;
+    background-color: var(--color1);
+    padding-top: 30px;
+    align-content: baseline;
 }
 
-.shoe-heels {
-    flex-direction: column;
+button {
+    background-color: #E6E6E9;
+    color: var(--color4);
+    border-radius: 15%;
+    width: 100px;
+    height: 30px;
+}
+
+.shoe-img {
+    width: 250px;
+    height: 200px;
+    opacity: 0.9;
+}
+
+.name {
+    font-size: 2rem;
 }
