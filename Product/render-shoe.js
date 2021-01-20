@@ -34,7 +34,7 @@ export function renderShoe(shoes) {
     const button = document.createElement('button');
     button.classList.add('purchase-button');
     button.value = shoes.id;
-    button.textContent = 'Add to cart';
+    button.textContent = 'Add to cart 🛒';
     li.append(button);
 
     return li;
