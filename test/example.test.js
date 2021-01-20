@@ -1,6 +1,6 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
-import { renderShoe } from '../product/render-shoe.js';
+import { renderShoe } from '../styles/product-temp/render-shoe.js';
 
 const test = QUnit.test;
 
