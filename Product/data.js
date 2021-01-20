@@ -1,4 +1,4 @@
-export const shoe = [
+export const shoes = [
     {
         id: 1,
         name: 'Black Heels',
@@ -27,7 +27,7 @@ export const shoe = [
         description: 'Pink, black, red, and blue sneakers with air bubble soles.',
         category: 'sneakers',
         price: 120,
-        brand: Nike,
+        brand: 'Nike',
         size: 7.5,
         image: 'sneakers.png',
     },
@@ -60,7 +60,7 @@ export const shoe = [
         description: 'Soft and fuzzy purple slippers that are perfect for a cold day.',
         category: 'slippers',
         price: 100,
-        brand: Uggs,
+        brand: 'Uggs',
         size: 7.5,
         image: 'slippers.png',
     },
