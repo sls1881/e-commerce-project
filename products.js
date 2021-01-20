@@ -1,5 +1,5 @@
 // import functions and grab DOM elements
-import { shoes } from './styles/product-temp/data.js';
+import { shoes } from './product-temp/data.js';
 import { renderShoe } from './render-shoe.js';
 // initialize state
 
