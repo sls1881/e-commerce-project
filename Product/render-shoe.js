@@ -6,17 +6,17 @@ export function renderShoe(shoes) {
     li.classList.add('shoe-items');
 
     const img = document.createElement('img');
-    img.classList.add('shoe-img');
+    img.classList.add('shoes-img');
     li.append(img);
-    img.src = `../assets/${shoes.image}`;
+    img.src = '../assets/shoes.image';
 
     const pName = document.createElement('p');
-    pName.classList.add('nName');
-    pName.textContent = `${shoes.name}`;
+    pName.classList.add('pName');
+    pName.textContent = shoes.name;
     li.append(pName);
 
     const pDescription = document.createElement('p');
-    pDescription.textContent = `${shoes.description}`;
+    pDescription.textContent = shoes.description;
     li.append(pDescription);
 
     const pPrice = document.createElement('p');
