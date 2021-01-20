@@ -8,7 +8,7 @@ export function renderShoe(shoes) {
     const img = document.createElement('img');
     img.classList.add('shoes-img');
     li.append(img);
-    img.src = '../assets/shoes.image';
+    img.src = `../assets/${shoes.image}`;
 
     const pName = document.createElement('p');
     pName.classList.add('pName');
