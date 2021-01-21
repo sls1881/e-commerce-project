@@ -1,5 +1,5 @@
-import { cartItem } from './cart/cart-data.js';
-import { shoes } from './product/data.js';
+// import { cartItem } from './cart/cart-data.js';
+// import { shoes } from './product/data.js';
 
 export function findById(id, array) {
     for (let item of array) {
@@ -19,7 +19,7 @@ let total = 0;
 export function calcOrderTotal(cartItem, shoes) {
 
     for (let item of cartItem) {
-
+        const shoe = findById(item.id, shoes);
         const totalByItem = calcItemTotal(item, shoe);
 
         total = total + totalByItem;
