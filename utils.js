@@ -24,9 +24,8 @@ export function calcOrderTotal(cartItem, shoes) {
 
         total = total + totalByItem;
 
-        return total;
-
     }
+    return total;
 }
 
 

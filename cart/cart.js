@@ -14,6 +14,8 @@ for (let item of cartItem) {
     tbody.append(dom);
 }
 
+const total = calcOrderTotal(cartItem, shoes);
+
 const tr = document.createElement('tr');
 
 const tdEmpty1 = document.createElement('td');
@@ -23,6 +25,11 @@ const tdEmpty2 = document.createElement('td');
 tr.append(tdEmpty2);
 
 const tdTotal = document.createElement('td');
-tdTotal.textContent = `Cart total: $${calcOrderTotal}`;
+tdTotal.textContent = `Cart total: $${total}`;
 tr.append(tdTotal);
+tbody.append(tr);
+
+
+
+
 
