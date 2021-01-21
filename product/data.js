@@ -37,7 +37,7 @@ export const shoes = [
         name: 'Tan Flats',
         description: 'Tan pointed toe flats.',
         category: 'flats',
-        price: 120,
+        price: 80,
         brand: 'Sam Edelman',
         size: 7.5,
         image: 'flats.png',
