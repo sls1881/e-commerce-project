@@ -6,10 +6,7 @@ export function findById(id, array) {
     }
 }
 
-export function calcItemTotal(cartItem, price) {
+export function calcItemTotal(item, shoe) {
 
-    const itemTotal = cartItem * price;
-
-    return itemTotal;
-
+    return item.quantity * shoe.price;
 }

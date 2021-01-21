@@ -2,11 +2,11 @@
 import { renderShoe } from '../product/render-shoe.js';
 
 //Import for cart test
-import { shoes } from '../product/data.js';
 import { findById } from '../utils.js';
 
 //Import for calculate total function
 import { renderTableRow } from '../cart/cart-render.js';
+import { calcItemTotal } from '../utils.js';
 
 //Products test
 const test = QUnit.test;
@@ -127,9 +127,26 @@ test('findById should take in a 3 from the shoes array and return a sneakers', (
 //calculate total test
 test('calcItemTotal should take in a quantity of 3 from the flats object it should return $240', (expect) => {
 
+    const item =
+    {
+        id: 4,
+        quantity: 3
+    };
+
+    const shoe = {
+        id: 4,
+        name: 'Tan Flats',
+        description: 'Tan pointed toe flats.',
+        category: 'flats',
+        price: 80,
+        brand: 'Sam Edelman',
+        size: 7.5,
+        image: 'flats.png',
+    };
+
     const expected = 240;
 
-    const actual = calcItemTotal(3, 80);
+    const actual = calcItemTotal(item, shoe);
 
     expect.equal(actual, expected);
 
@@ -142,13 +159,21 @@ test('It should take in cart items and return table rows', (expect) => {
         quantity: 1
     };
 
-    const expected = `<tr><th class="table-header">Product</th>
-    <th class="table-header">Quantity</th>
-    <th class="table-header">Price</th>
-    </tr>`;
+    const shoe2 = {
+        id: 2,
+        name: 'Black Boots',
+        description: 'Three inch black high heel boots with a medium width heel.',
+        category: 'boots',
+        price: 150,
+        brand: 'Sam Edelman',
+        size: 7.5,
+        image: 'boots.png',
+    };
 
-    const actual = renderTableRow(cartItem2);
+    const expected = `<tr><td>Black Boots</td><td>1</td><td>$150</td></tr>`;
 
-    expect.equal(actual, expected);
+    const actual = renderTableRow(cartItem2, shoe2);
+
+    expect.equal(actual.outerHTML, expected);
 });
 
