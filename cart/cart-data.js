@@ -1,3 +1,4 @@
+//2: Create dummy data for cart after hard coding in HTML
 export const cartItem = [
     {
         id: 1,

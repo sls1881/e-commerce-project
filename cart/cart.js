@@ -6,6 +6,7 @@ import { calcOrderTotal, findById } from '../utils.js';
 
 const tbody = document.querySelector('tbody');
 
+//6: Loop through the data and append it to the DOM using the renderTableRow function
 for (let item of cartItem) {
     const shoe = findById(item.id, shoes);
 
@@ -14,6 +15,7 @@ for (let item of cartItem) {
     tbody.append(dom);
 }
 
+//8: Store the calcOrderTotal function, create a table row with two empty cells and one order total cell (3), add text content with stored function to return order total, append to the tbody to display the cart total in the appropriate cell of the cart
 const total = calcOrderTotal(cartItem, shoes);
 
 const tr = document.createElement('tr');
@@ -27,6 +29,7 @@ tr.append(tdEmpty2);
 const tdTotal = document.createElement('td');
 tdTotal.textContent = `Cart total: $${total}`;
 tr.append(tdTotal);
+
 tbody.append(tr);
 
 
