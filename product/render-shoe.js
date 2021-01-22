@@ -1,5 +1,3 @@
-
-
 export function renderShoe(shoes) {
     const li = document.createElement('li');
 
@@ -32,6 +30,10 @@ export function renderShoe(shoes) {
     li.append(pBrand);
 
     const button = document.createElement('button');
+    //1: Add event listener to 'Add to cart' buttons
+    button.addEventListener('click', () => {
+        //Need addCart function
+    });
     button.classList.add('purchase-button');
     button.value = shoes.id;
     button.textContent = 'Add to cart 🛒';

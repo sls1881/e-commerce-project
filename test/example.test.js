@@ -285,3 +285,5 @@ test('It should return 1210 for all the cart items', (expect) => {
     expect.deepEqual(actual, expected);
 });
 
+test('It should return a cart when adding to the cart');
+
