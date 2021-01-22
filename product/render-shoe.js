@@ -1,3 +1,5 @@
+import { addToCart } from '../cart/cart-utils.js';
+
 export function renderShoe(shoes) {
     const li = document.createElement('li');
 
@@ -32,8 +34,9 @@ export function renderShoe(shoes) {
     const button = document.createElement('button');
     //1: Add event listener to 'Add to cart' buttons
     button.addEventListener('click', () => {
-        //Need addCart function
+        addToCart(shoes.id);
     });
+
     button.classList.add('purchase-button');
     button.value = shoes.id;
     button.textContent = 'Add to cart 🛒';

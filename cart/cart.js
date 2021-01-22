@@ -33,6 +33,7 @@ tr.append(tdTotal);
 tbody.append(tr);
 
 
+//Add event listener for 'Order' button
 
-
+// pullCart = getCart();
 

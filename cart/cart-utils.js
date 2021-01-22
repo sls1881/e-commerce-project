@@ -1,4 +1,4 @@
-import { findById } from "../utils";
+import { findById } from '../utils.js';
 
 //Store global variables
 const CART = 'CART';
@@ -22,7 +22,7 @@ export function getCart() {
     } else {
 
         //Turn empty cart into an array, parsed
-        const emptyCartString = JSON.parse(emptyCart);
+        const emptyCartString = JSON.stringify(emptyCart);
 
         //Save to local storage
         localStorage.setItem(CART, emptyCartString);
@@ -37,6 +37,7 @@ export function addToCart(id) {
 
     //Get cart from local storage
     const pullCart = getCart();
+    console.log(pullCart);
 
     //Use findByID to check if ID is already in the cart
     const cartItem = findById(id, pullCart);
@@ -55,6 +56,7 @@ export function addToCart(id) {
         pullCart.push(newItem);
     }
 
+    setCart(pullCart);
 
 }
 
@@ -69,5 +71,9 @@ export function setCart(pullCart) {
 }
 
 export function clearCart() {
-    const
+    //Stringify the cleared cart
+    const clearCartString = JSON.stringify(emptyCart);
+
+    //Save cleared cart to local storage
+    localStorage.setItem(CART, clearCartString);
 }
