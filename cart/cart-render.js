@@ -1,6 +1,5 @@
 import { calcItemTotal } from '../utils.js';
 
-
 //5: Manipulate the DOM by creating HTML elements for our data to display in
 export function renderTableRow(item, shoe) {
 
@@ -20,4 +19,3 @@ export function renderTableRow(item, shoe) {
 
     return tr;
 }
-
