@@ -32,7 +32,6 @@ export function renderShoe(shoes) {
     li.append(pBrand);
 
     const button = document.createElement('button');
-    //1: Add event listener to 'Add to cart' buttons
     button.addEventListener('click', () => {
         addToCart(shoes.id);
     });
@@ -42,5 +41,5 @@ export function renderShoe(shoes) {
     button.textContent = 'Add to cart 🛒';
     li.append(button);
 
-    return li;
-}
+    return li; 
+} 

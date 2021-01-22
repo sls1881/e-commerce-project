@@ -15,7 +15,7 @@ for (let item of cartItem) {
     tbody.append(dom);
 }
 
-//8: Store the calcOrderTotal function, create a table row with two empty cells and one order total cell (3), add text content with stored function to return order total, append to the tbody to display the cart total in the appropriate cell of the cart
+//8: Store the calcOrderTotal function, create a table row with two empty cells and one order total cell, add text content with stored function to return order total, append to the tbody to display the cart total in the appropriate cell of the cart
 const total = calcOrderTotal(cartItem, shoes);
 
 const tr = document.createElement('tr');
@@ -32,8 +32,5 @@ tr.append(tdTotal);
 
 tbody.append(tr);
 
-
-//Add event listener for 'Order' button
-
-// pullCart = getCart();
+//Add event listener for order button with alert and clear
 

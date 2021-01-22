@@ -21,7 +21,7 @@ export function getCart() {
         //If there is not a cart in localStorage...
     } else {
 
-        //Turn empty cart into an array, parsed
+        //Stringify the empty cart into a string
         const emptyCartString = JSON.stringify(emptyCart);
 
         //Save to local storage
@@ -37,7 +37,6 @@ export function addToCart(id) {
 
     //Get cart from local storage
     const pullCart = getCart();
-    console.log(pullCart);
 
     //Use findByID to check if ID is already in the cart
     const cartItem = findById(id, pullCart);
