@@ -8,6 +8,9 @@ import { calcOrderTotal, findById } from '../utils.js';
 import { renderTableRow } from '../cart/cart-render.js';
 import { calcItemTotal } from '../utils.js';
 
+//import local storage
+import { getCart, clearCart, setCart } from '../cart/cart-utils.js';
+
 //Products test
 const test = QUnit.test;
 
@@ -281,6 +284,74 @@ test('It should return 1210 for all the cart items', (expect) => {
     const expected = 1210;
 
     const actual = calcOrderTotal(cartItems, shoes);
+
+    expect.deepEqual(actual, expected);
+});
+
+//getCart
+test('getCart should take in the test cart from local storage and return an array', (expect) => {
+
+    const testCart = [
+
+        {
+            id: 1,
+            quantity: 2
+        },
+        {
+            id: 2,
+            quantity: 1
+        },
+        {
+            id: 3,
+            quantity: 2
+        },
+    ];
+
+    const cartString = JSON.stringify(testCart);
+
+    localStorage.setItem('CART', cartString);
+
+    const pullCart = getCart();
+
+    expect.deepEqual(pullCart, testCart);
+
+});
+
+test('clearCart should stringify the default cart and then set it to local storage and return and empty product cart', (expect) => {
+
+    const expected = [];
+
+    clearCart();
+
+    const actual = getCart();
+
+    expect.deepEqual(actual, expected);
+
+});
+
+test('setCart should stringify what is in the product cart and set it to local storage.', (expect) => {
+
+    const testCart = [
+
+        {
+            id: 1,
+            quantity: 2
+        },
+        {
+            id: 2,
+            quantity: 1
+        },
+        {
+            id: 3,
+            quantity: 2
+        },
+    ];
+
+    const cartString = JSON.stringify(testCart);
+
+    const expected = localStorage.setItem('CART', cartString);
+
+    const actual = setCart(testCart);
 
     expect.deepEqual(actual, expected);
 });

@@ -15,6 +15,7 @@ body, button {
 }
 main {
     background-image: url('https://ak.picdn.net/shutterstock/videos/777844/thumb/1.jpg');
+    min-height: 500px;
 }
 
 nav {
