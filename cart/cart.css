@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    --color1: hsla(349, 25%, 79%, 1);
+    --color2: hsla(323, 32%, 73%, 1);
+    --color3: hsla(317, 36%, 65%, 1);
+    --color4: hsla(313, 38%, 57%, 1);
+    --color5: rgb(231, 109, 229);
+}
+
+body, button {
+    font-family: 'Dosis', sans-serif;
+}
+main {
+    background-image: url('https://ak.picdn.net/shutterstock/videos/777844/thumb/1.jpg');
+    min-height: 500px;
+}
+
+nav {
+    border-bottom: 2px solid black;
+    height: 100px;
+}
+
+h1 {
+    font-size: 3rem;
+    text-align: center;
+    color: var(--color5);
+}
+
+table {
+    text-align:left;
+    width: 80%;
+}
+
+button {
+    background-color: var(--color5);
+    border-radius: 15%;
+    width: 100px;
+    height: 30px;
+}
+
+.table-header {
+    font-size: 1.5rem;
+}
