@@ -44,6 +44,11 @@ li {
     align-content: baseline;
 }
 
+input {
+    width: 50px;
+    border-radius: 15px;
+}
+
 button {
     background-color: #E6E6E9;
     color: var(--color4);

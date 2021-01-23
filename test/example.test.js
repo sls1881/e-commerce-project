@@ -28,7 +28,7 @@ test('It should take in a shoe and return a li', (expect) => {
     };
 
     // Set up your arguments and expectations
-    const expected = `<li class="shoe-items"><img class="shoes-img" src="../assets/heels.png"><p class="pName">Black Heels</p><p>Four inch black high heels with a thin heel.</p><p>Price: $120</p><p>Size: 7.5</p><p>Brand: Sam Edelman</p><button class="purchase-button" value="1">Add to cart 🛒</button></li>`;
+    const expected = `<li class="shoe-items"><img class="shoes-img" src="../assets/heels.png"><p class="pName">Black Heels</p><p>Four inch black high heels with a thin heel.</p><p>Price: $120</p><p>Size: 7.5</p><p>Brand: Sam Edelman</p><div class="input-button"><input type="number"><button class="purchase-button">Add to cart 🛒</button></div></li>`;
 
     //Act 
     // Call the function you're testing and set the result to a const
@@ -311,12 +311,13 @@ test('getCart should take in the test cart from local storage and return an arra
 
     localStorage.setItem('CART', cartString);
 
-    const pullCart = getCart();
+    const cart = getCart();
 
-    expect.deepEqual(pullCart, testCart);
+    expect.deepEqual(cart, testCart);
 
 });
 
+//clearCart
 test('clearCart should stringify the default cart and then set it to local storage and return and empty product cart', (expect) => {
 
     const expected = [];
@@ -329,6 +330,7 @@ test('clearCart should stringify the default cart and then set it to local stora
 
 });
 
+//setCart
 test('setCart should stringify what is in the product cart and set it to local storage.', (expect) => {
 
     const testCart = [

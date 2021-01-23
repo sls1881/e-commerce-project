@@ -31,16 +31,28 @@ export function renderShoe(shoes) {
     pBrand.textContent = `Brand: ${shoes.brand}`;
     li.append(pBrand);
 
+    const div = document.createElement('div');
+    div.classList.add('input-button');
+    li.append(div);
+
+    //Need to add an input drop-down
+    const quantityInput = document.createElement('input');
+    quantityInput.type = 'number';
+    div.append(quantityInput);
+
     const button = document.createElement('button');
     button.addEventListener('click', () => {
-        addToCart(shoes.id);
+        const quantity = quantityInput.valueAsNumber;
+        addToCart(shoes.id, quantity);
+
+        quantityInput.value = '';
 
     });
 
     button.classList.add('purchase-button');
-    button.value = shoes.id;
     button.textContent = 'Add to cart 🛒';
-    li.append(button);
+    div.append(button);
+
 
     return li;
 } 
