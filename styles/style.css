@@ -31,8 +31,15 @@ main {
 }
 
 nav {
+    display: flex;
     border-bottom: 2px solid black;
     height: 100px;
+}
+
+a {
+    height: 30px;
+    align-self: flex-end;
+    margin: 10px;
 }
 
 h1 {

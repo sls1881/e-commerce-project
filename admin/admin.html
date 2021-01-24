@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap" rel="stylesheet">
+    <title>Shelby's Shoes Admin</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+    <nav class='nav-cart'>
+        <a href='../index.html'>Home</a>
+        <a href='../product/products.html'>Products</a>
+        <a href="../cart/cart.html">My cart</a>
+    </nav>
+    <section>
+        <h1>Product Admin Tool</h1>
+    </section>
+    <main>
+        <fieldset>
+            <legend>New Product Entry (Admin)</legend>
+            <form id='admin-form' class='admin-form' action='' method='GET'>
+                <input type='username' name='username' placeholder='Username' required='required' />
+                <input type='password' name='password' placeholder='Password' required />
+                <input type='number' name='id' placeholder='Product id' required />
+                <input type='text' name='name' placeholder='Product name' required />
+                <input type='textarea' name='description' required placeholder='description' />
+                <input type='text' name='category' required placeholder='Product category' />
+                <input type='number' name='price' placeholder='Product price' required />
+                <input type='text' name='brand' placeholder='Brand name' required />
+                <input type='number' name='size' placeholder='Shoe size' required />
+                <input type='file' name='product-img' />
+                <button type="submit">Add product</button>
+            </form>
+        </fieldset>
+    </main>
+
+    <script type='module' src="admin.js"></script>
+</body>
+
+</html>
